@@ -1,0 +1,230 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0px;
+    margin:0px;
+    background: rgb(144, 144, 197);
+    font-family:'Tilt Neon', cursive;
+
+
+}
+h1,h2,h3,h4,h5,h6 {
+    color: rgb(119, 29, 29);
+    font-family: 'Tilt Neon', cursive;
+}
+header{
+    background:rgb(207, 211, 214);
+    height:66px;
+    
+}
+header*{
+    color: aliceblue;
+   
+}
+header .logo{
+    float:left;
+    height:inherit;
+    
+    
+}
+header .logo-text {
+    margin: 9px;
+    font-family: 'Tilt Neon', cursive;
+}
+
+header .logo-text span{
+    color: blueviolet;
+    font-family: 'Tilt Neon', cursive;
+}
+
+header ul{
+    float:right;
+    
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+    
+    
+}
+header ul li {
+    float:left;
+    position: relative;
+}
+header ul li:hover  ul{
+  display: block;
+
+}
+header ul li ul  {
+   
+    position: absolute;
+    top: 66px;
+    right: 0px;
+    width: 180px;
+    display: none;
+    z-index: 88888 ;
+}
+header ul li ul li{
+    width: 100%;
+}
+header ul li ul li a{
+    
+    padding: 10px;
+    background-color: aliceblue;
+    
+}
+header ul li ul li a.logout{
+    
+    
+  color: rgb(230, 9, 57);
+    
+}
+header ul li ul li a:hover{
+    
+    color: gray;
+    
+}
+header ul li a{
+    display:block;
+    padding: 21px;
+    font: size 1.1em;
+    text-decoration: none;
+}
+header ul li a:hover{
+    background: yellow;
+    display:block;
+    padding: 21px;
+    font: size 1.1em;
+    text-decoration: none;
+    transition:0.5s
+}
+header .menu-toggle {
+    display:none;
+
+}
+.page-wrapper a:hover{
+    color: rgb(182, 41, 224);
+
+}
+
+/*post slider*/
+.post-slider{
+    position: relative;
+}
+.post-slider .slider-title{
+    text-align:center;
+    margin: 30px auto;
+}
+.post-slider .next{
+   position: absolute;
+   top: 50%;
+   right: 30px;
+   font-size: 2em;
+   color: black;
+   cursor: pointer;
+}
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+   color: black;
+   cursor: pointer;
+ }
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+}
+.post-slider .post-wrapper .post{
+    background: rgb(220, 231, 220);
+    display: inline-block;
+    margin:0px 10px;
+    width:300px;
+    height: 330px;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem black;
+
+}
+.post-slider .post-wrapper .post .post-info
+{
+    padding: 0px 5px;
+    height: 130px;
+    border:1px solid green;
+    
+}
+
+
+.post-slider .post-wrapper .post  .slider-image{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+/*Media Queries*/
+/*how it will look under diffrent devices*/
+
+@media only screen and (max-width:750px){
+    header {
+        position: relative;
+    }
+    header ul{
+        width: 100%;
+        background-color: aliceblue;
+        max-height: 0px;
+        border: 1px solid red;
+        overflow:hidden;        
+        
+    }
+    .showing{
+       max-height:100em 
+    }
+    header ul li {
+        width: 100%;
+    }
+    header ul li ul  {
+   
+        position: static;
+        
+        width: 100%;
+        display: block;
+        background: inherit;
+    }
+    header ul li ul li a{
+    
+        padding: 10px;
+        background-color: aliceblue;
+        padding-left: 50px;
+        
+    }
+    header ul li ul li a.logout{
+        
+        
+      color: rgb(230, 9, 57);
+        
+    }
+    header .menu-toggle {
+        display:block;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+        position: absolute;
+        color: black;
+    
+    }
+    header .logo{
+        
+        margin-left: .8em;
+        
+    }
+  
+ 
+
+
+}
